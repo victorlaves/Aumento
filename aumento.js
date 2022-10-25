@@ -1,6 +1,6 @@
 var salario, nome, salarioAumen, porcentagemAumento
-
-console.log(SalarioENome())
+SalarioENome()
+console.log(salario, nome)
 console.log(CalculePorcentagem())
 
 function SalarioENome() {
@@ -23,25 +23,25 @@ else
 {
     porcentagemAumento = 5
 }
-return salario, nome, porcentagemAumento
 }
 
 function CalculePorcentagem()
 {
     if(porcentagemAumento == 20){
-    salarioAumen = (salario * 20) / 100
+    salarioAumen = (salario * porcentagemAumento) / 100
     salario = salarioAumen + salario
     }
     else if(porcentagemAumento == 15){
-    salarioAumen = (salario * 15) / 100
+    salarioAumen = (salario * porcentagemAumento) / 100
     salario = salarioAumen + salario
     }
     else if(porcentagemAumento == 10){
-    salarioAumen = (salario * 10) / 100
+    salarioAumen = (salario * porcentagemAumento) / 100
     salario = salarioAumen + salario
     }
     else{
-    salarioAumen = (salario * 5) / 100
+    salarioAumen = (salario * porcentagemAumento) / 100
     salario = salarioAumen + salario
     }
+    return salario
 }
