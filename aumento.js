@@ -1,8 +1,11 @@
 var salario, nome, salarioAumen, porcentagemAumento, salarioComAumen
+var keep = true
+while(keep){
 SalarioENome()
 CalculePorcentagem()
 console.log("Seu nome é ", nome, "seu salario atual é ", salario, "a porcentagem de aumento será de ", porcentagemAumento, "e seu novo salario será ", salarioComAumen)
-
+DesejaContinuar()
+}
 function SalarioENome() {
     salario = parseInt(prompt("Digite seu salario"))
     nome = prompt("Digite seu nome")
@@ -25,8 +28,7 @@ else
 }
 }
 
-function CalculePorcentagem()
-{
+function CalculePorcentagem(){
     if(porcentagemAumento == 20){
     salarioAumen = (salario * porcentagemAumento) / 100
     salarioComAumen = salarioAumen + salario
@@ -43,4 +45,14 @@ function CalculePorcentagem()
     salarioAumen = (salario * porcentagemAumento) / 100
     salarioComAumen = salarioAumen + salario
     }
+}
+
+function DesejaContinuar(continuar){
+    var continuar = prompt("Deseja continuar ? Sim ou Nao")
+    if(continuar == "Não" || continuar == "Nao"){
+    keep = false
+    }
+    else{
+        console.clear()
+}
 }
